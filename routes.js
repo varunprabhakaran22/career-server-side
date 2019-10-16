@@ -23,7 +23,6 @@ module.exports = (app, col) => {
     app.get("/google",passport.authenticate('google',{
         scope:['profile']
     }))
-    
  }
 
 
