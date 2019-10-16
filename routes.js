@@ -1,4 +1,4 @@
-const passportsetup = require('./config/passport');
+require("./config/passport");
 const passport = require("passport")
 module.exports = (app, col) => {
     app.get("/api", (req, res) => {
@@ -26,9 +26,6 @@ module.exports = (app, col) => {
     
  }
 
- 
- 
- 
 
  
 

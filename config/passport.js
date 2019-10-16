@@ -5,7 +5,7 @@ const keys = require("./keys")
 
 passport.use(
     new google({
-        callBackURL:"/google/redirect",
+        callbackURL:"/google/redirect",
         clientID: keys.google.clientID,
         clientSecret:keys.google.clientSecret
     }, ()=>{

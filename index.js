@@ -1,5 +1,6 @@
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
+require("./config/passport");
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://varun:Mustang@cluster0-bhfp5.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri,{ useUnifiedTopology: true }, { useNewUrlParser: true });
@@ -10,6 +11,7 @@ client.connect(err => {
     console.log("connect");
     if (err)
     return console.log(err);
+     
 
     //routes
     app.use(cors());
