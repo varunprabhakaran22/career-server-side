@@ -7,8 +7,7 @@ module.exports = (app, col) => {
             let loca=JSON.stringify(document)
              loca=JSON.parse(loca)
             res.send(document);
-            console.log(loca)
-            
+            console.log(loca);     
           });
     });
 
@@ -23,8 +22,10 @@ module.exports = (app, col) => {
     app.get("/google",passport.authenticate('google',{
         scope:['profile']
     }))
+
+
+    app.get("/google/redirect",(req,res) => {
+        res.send("login ")
+    })
  }
-
-
- 
 

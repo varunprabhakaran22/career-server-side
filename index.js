@@ -15,8 +15,8 @@ client.connect(err => {
 
     //routes
     app.use(cors());
-    require('./routes')(app, col);
-    app.listen(port, () => {
+    // require('./')(app, col);
+    app.listen(3000, () => {
         console.log("Port 8100 running on browser...");
     });
 });
